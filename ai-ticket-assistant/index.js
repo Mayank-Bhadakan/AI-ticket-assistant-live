@@ -9,20 +9,31 @@ import { onUserSignup } from "./inngest/functions/on-signup.js";
 import { onTicketCreated } from "./inngest/functions/on-ticket-create.js";
 
 import dotenv from "dotenv";
+import { err } from "inngest/types";
 dotenv.config();
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8000;
 const app = express();
+app.use(express.json());
+
+// app.use(cors({
+//   origin: "http://localhost:5173",   // allow frontend dev server
+//   methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
+//   allowedHeaders: ["Content-Type", "Authorization"],
+// }));
 
 app.use(cors({
-  origin: "http://localhost:5173",   // allow frontend dev server
-  methods: ["GET", "POST", "PUT", "DELETE", "OPTIONS"],
-  allowedHeaders: ["Content-Type", "Authorization"],
+  origin: process.env.FRONTEND_URL || "*",
+  credentials: true
 }));
-app.use(express.json());
+
 
 app.use("/api/auth", userRoutes);
 app.use("/api/tickets", ticketRoutes);
+
+app.get("/", (req, res) => {
+  res.send("Backend is running ✅");
+});
 
 app.use(
   "/api/inngest",
@@ -36,6 +47,6 @@ mongoose
   .connect(process.env.MONGO_URI)
   .then(() => {
     console.log("MongoDB connected ✅");
-    app.listen(PORT, () => console.log("🚀 Server at http://localhost:3000"));
+    app.listen(PORT, () => console.log(`🚀 Server at http://localhost:${PORT}`));
   })
-  .catch((err) => console.error("❌ MongoDB error: ", err));
+  .catch((err) => console.log(`🚀 Server at http://localhost:${PORT},  ${err}`));

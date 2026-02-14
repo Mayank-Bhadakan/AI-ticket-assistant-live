@@ -47,6 +47,7 @@ import { inngest } from "../inngest/client.js";
 //   }
 // };
 
+
 export const signup = async (req, res) => {
   try {
     // ✅ Normalize email before checking or saving
