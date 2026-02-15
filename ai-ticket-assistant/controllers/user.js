@@ -85,6 +85,8 @@ export const signup = async (req, res) => {
       skills: skillsArray,
     });
 
+    console.log("🔥 Sending Inngest event...");
+
     await inngest.send({
       name: "user/signup",
       data: { email },
