@@ -1,8 +1,19 @@
 import { motion } from "framer-motion";
-import { Ticket, CheckCircle, Clock, BarChart3, Activity } from "lucide-react";
+import { Ticket, CheckCircle, Clock, BarChart3, Activity, Github } from "lucide-react";
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { Link } from "react-router-dom";
 import PageTransition from "../components/PageTransition.jsx";
+import arrow from "../icon/arrow1.svg"
+import rightArrow from "../icon/rightarrow.png"
+import aichip from "../icon/aichip.png"
+import userNetwork from "../icon/usernetwork.png"
+import workflow from "../icon/workflow1.png"
+import mail from "../icon/mail.png"
+import aiFiles from "../icon/aifiles.png"
+import securityShild from "../icon/securityshield.png"
+import linkedIn from "../icon/linkedin.png"
+import gitHub from "../icon/github.png"
+import twitter from "../icon/twitter.png"
 
 export default function HomePage() {
   return (
@@ -21,7 +32,7 @@ export default function HomePage() {
 
             <Link to="/login" className="flex w-fit items-center gap-3 font-semibold px-6 py-1 mt-7 mb-5 rounded-2xl shadow-lg hover:opacity-70 transition-all duration-300 bg-gradient-to-b from-[rgb(7,95,80)] via-[rgb(10,100,110)] to-[rgb(10,98,205)] inset-shadow-cyan-500/70 shadow-white/50 shadow-sm inset-shadow-sm  " > Let's GO 
 
-              <img src="./src/icon/arrow1.svg" alt="Arrow Right" className="w-5 h-auto " />
+              <img src={arrow} alt="Arrow Right" className="w-5 h-auto " />
 
             </Link>
 
@@ -56,7 +67,7 @@ export default function HomePage() {
 
             <div className="flex w-full">
               <div className="w-1/11 justify-center flex">
-                <img src="./src/icon/rightarrow.png" alt="" className="w-12 h-10" />
+                <img src={rightArrow} alt="" className="w-12 h-10" />
               </div>
               <div className="w-10/11 text-left ">
                 <h1 className="mt-1 text-xl text-white/80 tracking-tight">TicketAI is an intelligent, next-generation support management system designed to simplify how teams handle customer issues. Powered by advanced AI analysis, TicketAI automatically reads, understands, and categorizes incoming tickets with exceptional precision. The result is a smarter, faster, and more organized workflow that lets support teams focus on meaningful work while the system handles the repetitive tasks.</h1>
@@ -65,7 +76,7 @@ export default function HomePage() {
 
             <div className="flex w-full  ">
               <div className="w-1/11 justify-center flex">
-                <img src="./src/icon/rightarrow.png" alt="" className="w-12 h-10" />
+                <img src={rightArrow} alt="" className="w-12 h-10" />
               </div>
               <div className="w-10/11  text-left ">
                 <h1 className="mt-1 text-xl text-white/80 tracking-tight ">Every feature in TicketAI is built to enhance clarity and productivity. Our AI-driven engine intelligently assigns tickets to the right agents, prioritizes urgent issues, and provides real-time insights into team performance. With a modern dashboard, smooth animations, and a beautifully refined UI, TicketAI transforms complicated ticket management into an elegant, intuitive experience. Whether you're a startup or a large organization, the system adapts effortlessly to your support needs.</h1>
@@ -74,7 +85,7 @@ export default function HomePage() {
 
             <div className="flex w-full  ">
               <div className="w-1/11 justify-center flex">
-                <img src="./src/icon/rightarrow.png" alt="" className="w-12 h-10" />
+                <img src={rightArrow} alt="" className="w-12 h-10" />
               </div>
               <div className="w-10/11  text-left ">
                 <h1 className="mt-1 text-xl text-white/80 tracking-tight">Built with MERN + Inngest automation, TicketAI brings a smooth animated UI, real-time updates, and consistent email notifications ensuring a professional and efficient support experience.</h1>
@@ -100,7 +111,7 @@ export default function HomePage() {
 
         <div className=" relative w-[70%] left-1/2 -translate-x-1/2 flex ">
           <div className="img w-1/2 justify-center flex">
-            <img src="./src/icon/aichip.png" alt="" className="object-cover w-[50%]" />
+            <img src={aichip} alt="" className="object-cover w-[50%]" />
           </div>
           <div className="feature w-1/2 flex flex-col justify-center">
             <h1 className="text-3xl my-2 text-cyan-600 font-bold tracking-tight">AI-Powered Ticket Classification</h1>
@@ -114,13 +125,13 @@ export default function HomePage() {
             <h2 className=" text-lg font-light text-white/80 tracking-tight ">Ticket AI matches every ticket with the most suitable moderator based on expertise and skill sets. This ensures issues reach the right person immediately, improving accuracy and response efficiency.</h2>
           </div>
           <div className="img w-1/2 justify-center flex">
-            <img src="./src/icon/usernetwork.png" alt="" className="object-cover w-[50%]" />
+            <img src={userNetwork} alt="" className="object-cover w-[50%]" />
           </div>
         </div>
 
         <div className=" relative w-[70%] left-1/2 -translate-x-1/2 flex ">
           <div className="img w-1/2 justify-center flex">
-            <img src="./src/icon/workflow1.png" alt="" className="object-cover w-[50%]" />
+            <img src={workflow} alt="" className="object-cover w-[50%]" />
           </div>
           <div className="feature w-1/2 flex flex-col justify-center">
             <h1 className="text-3xl my-2 text-cyan-600 font-bold tracking-tight">Real-Time Ticket Workflow Automation</h1>
@@ -134,13 +145,13 @@ export default function HomePage() {
             <h2 className=" text-lg font-light text-white/80 tracking-tight ">Important updates never slip through. Ticket AI sends automatic, beautifully formatted emails for assignments, status updates, and admin reviews—keeping everyone connected at all times.</h2>
           </div>
           <div className="img w-1/2 justify-center flex">
-            <img src="./src/icon/mail.png" alt="" className="object-cover w-[50%]" />
+            <img src={mail}alt="" className="object-cover w-[50%]" />
           </div>
         </div>
 
         <div className=" relative w-[70%] left-1/2 -translate-x-1/2 flex ">
           <div className="img w-1/2 justify-center flex">
-            <img src="./src/icon/aifiles.png" alt="" className="object-cover w-[40%]" />
+            <img src={aiFiles} alt="" className="object-cover w-[40%]" />
           </div>
           <div className="feature w-1/2 flex flex-col justify-center">
             <h1 className="text-3xl my-2 text-cyan-600 font-bold tracking-tight">AI-Generated Helpful Notes</h1>
@@ -154,7 +165,7 @@ export default function HomePage() {
             <h2 className=" text-lg font-light text-white/80 tracking-tight ">With JWT-based authentication and role-based routing, your workspace stays secure. Users, moderators, and admins access only the features designed for them.</h2>
           </div>
            <div className="img w-1/2 justify-center flex">
-            <img src="./src/icon/securityshield.png" alt="" className="object-cover w-[50%]" />
+            <img src={securityShild} alt="" className="object-cover w-[50%]" />
           </div>
         </div>
 
@@ -175,9 +186,9 @@ export default function HomePage() {
             <h1 className="tracking-wide text-6xl font-bold bg-gradient-to-b from-white/50 via-white/20  to-transparent bg-clip-text text-transparent">SOCIAL MEDIA</h1>
             <div className="overflow-hidden flex items-center gap-3 px-10 ">
 
-              <img src="./src/icon/linkedin.png" alt="" className="w-[3rem] h-[3rem] transition-transform duration-300 ease-out hover:scale-110" />
-              <img src="./src/icon/github.png" alt="" className="w-[3rem] h-[3rem] transition-transform duration-300 ease-out hover:scale-110" />
-              <img src="./src/icon/twitter.png" alt="" className="w-[3rem] h-[3rem] transition-transform duration-300 ease-out hover:scale-110" />
+              <img src={linkedIn} alt="" className="w-[3rem] h-[3rem] transition-transform duration-300 ease-out hover:scale-110" />
+              <img src={gitHub} alt="" className="w-[3rem] h-[3rem] transition-transform duration-300 ease-out hover:scale-110" />
+              <img src={twitter} alt="" className="w-[3rem] h-[3rem] transition-transform duration-300 ease-out hover:scale-110" />
               
             </div>
           </div>
