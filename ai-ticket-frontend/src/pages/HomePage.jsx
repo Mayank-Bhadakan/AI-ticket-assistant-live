@@ -3,8 +3,8 @@ import { Ticket, CheckCircle, Clock, BarChart3, Activity, Github } from "lucide-
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { Link } from "react-router-dom";
 import PageTransition from "../components/PageTransition.jsx";
-import {arrow} from "../icon/arrow1.svg"
-import {rightArrow} from "../icon/rightarrow.png"
+import arrow from "../icon/arrow1.svg"
+import rightArrow from "../icon/rightarrow.png"
 import aichip from "../icon/aichip.png"
 import userNetwork from "../icon/usernetwork.png"
 import workflow from "../icon/workflow1.png"
