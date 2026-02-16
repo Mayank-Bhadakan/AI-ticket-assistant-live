@@ -32,7 +32,7 @@ export default function AdminPanel() {
     setLoading(true);
     setError(null);
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/auth/users`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/users`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
@@ -85,7 +85,7 @@ export default function AdminPanel() {
     if (!editingUser) return;
     setSavingFor(editingUser);
     try {
-      const res = await fetch(`${import.meta.env.VITE_API_URL}/auth/update-user`, {
+      const res = await fetch(`${import.meta.env.VITE_API_URL}/api/auth/update-user`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
