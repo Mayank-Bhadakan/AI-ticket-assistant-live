@@ -52,7 +52,7 @@ export default function Navbar() {
       // Optional: call backend logout for logging or token validation
       // If you don't have an API route, this call will fail — you can keep it or remove it.
       if (token) {
-        await fetch(`${import.meta.env.VITE_SERVER_URL}/auth/logout`, {
+        await fetch(`${import.meta.env.VITE_API_URL}/auth/logout`, {
           method: "POST",
           headers: {
             Authorization: `Bearer ${token}`,
