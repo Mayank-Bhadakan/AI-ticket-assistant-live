@@ -53,7 +53,6 @@ console.log("🔍 Raw Gemini Response:", response);
 
   // const raw = response.output[0].content;
   const raw = response?.output[0]?.content?.[0]?.text || "";
-  console.log("AI RAW RESPONSE:", raw);
 
   console.log("AI RAW RESPONSE:", JSON.stringify(response, null, 2));
 

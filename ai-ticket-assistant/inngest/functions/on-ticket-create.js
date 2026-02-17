@@ -8,10 +8,7 @@ import analyzeTicket from "../../utils/ai.js";
 export const onTicketCreated = inngest.createFunction(
   { id: "on-ticket-created", retries: 2 },
   { event: "ticket/created" },
-  async (ctx) => {
-
-    const { event, step } = ctx;
-
+  async ({ event, step }) => {
     try {
       const { ticketId } = event.data;
 
@@ -29,7 +26,6 @@ export const onTicketCreated = inngest.createFunction(
 
       //  Analyze ticket with AI
       const aiResponse = await analyzeTicket(ticket);
-      console.log("AI Response Object:", aiResponse);
 
       const relatedSkills = await step.run("ai-processing", async () => {
         if (aiResponse) {
