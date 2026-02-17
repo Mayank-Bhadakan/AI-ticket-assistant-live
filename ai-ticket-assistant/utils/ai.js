@@ -17,7 +17,7 @@ Your job is to:
 
 IMPORTANT:
 - Respond with *only* valid raw JSON.
-- Do NOT include markdown, code fences, comments, or any extra formatting.
+- Do NOT include markdown, code fences, comments, or any extra formatting
 - The format must be a raw JSON object.
 
 Repeat: Do not wrap your output in markdown or code fences.`,
@@ -51,9 +51,9 @@ Ticket information:
 
 console.log("🔍 Raw Gemini Response:", response);
 
-  const raw = response.output[0].content;
+  // const raw = response.output[0].content;
+  const raw = response?.output[0]?.content?.[0]?.text || "";
   console.log("AI RAW RESPONSE:", raw);
-
 
   console.log("AI RAW RESPONSE:", JSON.stringify(response, null, 2));
 
