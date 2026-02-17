@@ -108,7 +108,7 @@ export default function TicketDetailsPage() {
 
 
  <PageTransition>
-    <div className="pt-20 bg-gradient-to-br from-[#0F172A] via-[#1E1B4B] to-[#1E293B] text-white min-h-screen">
+    <div className="min-h-screen pt-20 bg-gradient-to-br from-[#0F172A] via-[#1E1B4B] to-[#1E293B] text-white min-h-screen">
       <div className="max-w-4xl mx-auto py-4 px-6 mt-5">
         <h2 className="text-3xl font-extrabold text-white/80 mx-5">Ticket Details</h2>
         <p className="text-gray-300 text-sm mb-5 mx-5">Full details and actions for this ticket.</p>

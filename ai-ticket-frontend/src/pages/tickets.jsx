@@ -72,7 +72,7 @@ export default function Tickets() {
   return (
     <PageTransition>
 
-    <div className="pt-20 bg-gradient-to-br from-[#0F172A] via-[#1E1B4B] to-[#1E293B] text-white">
+    <div className=" min-h-screen pt-20 bg-gradient-to-br from-[#0F172A] via-[#1E1B4B] to-[#1E293B] text-white">
     <div className="p-4 max-w-3xl mx-auto text-white flex flex-col">
 
       {user?.role !== "admin" && ( 
