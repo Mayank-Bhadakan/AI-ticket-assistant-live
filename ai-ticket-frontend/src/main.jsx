@@ -18,7 +18,7 @@ createRoot(document.getElementById("root")).render(
     
         <Navbar />
 
-      <Routes classname="mi-h-screen">
+      <Routes classname="min-h-screen">
 
         <Route
           path="/"
