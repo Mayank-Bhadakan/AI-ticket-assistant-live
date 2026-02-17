@@ -8,7 +8,10 @@ import analyzeTicket from "../../utils/ai.js";
 export const onTicketCreated = inngest.createFunction(
   { id: "on-ticket-created", retries: 2 },
   { event: "ticket/created" },
-  async ({ event, step }) => {
+  async (ctx) => {
+
+    const { event, step } = ctx;
+
     try {
       const { ticketId } = event.data;
 
