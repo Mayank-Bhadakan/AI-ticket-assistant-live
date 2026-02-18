@@ -80,7 +80,7 @@
 
 //////////////////////////////////// ADDING GEMINI SDK HERE ////////////////////////////////////////////
 
-import { GoogleGenerativeAI } from "@google/generative-ai";
+import { GoogleGenAI } from "@google/genai";
 
 const analyzeTicket = async (ticket) => {
   try {
@@ -89,10 +89,8 @@ const analyzeTicket = async (ticket) => {
       return null;
     }
 
-    const genAI = new GoogleGenerativeAI(process.env.GEMINI_API_KEY);
-
-    const model = genAI.getGenerativeModel({
-      model: "gemini-1.5-flash-latest"
+    const ai = new GoogleGenAI({
+      apiKey: process.env.GEMINI_API_KEY,
     });
 
     const prompt = `
@@ -111,17 +109,20 @@ Title: ${ticket.title}
 Description: ${ticket.description}
 `;
 
-    const result = await model.generateContent(prompt);
-    const response = await result.response;
-    const text = response.text();
+    const response = await ai.models.generateContent({
+      model: "gemini-1.5-flash",
+      contents: prompt,
+    });
 
-    const jsonMatch = text.match(/\{[\s\S]*\}/);
-    if (!jsonMatch) {
+    const text = response.text;
+
+    const match = text.match(/\{[\s\S]*\}/);
+    if (!match) {
       console.log("❌ No JSON found in Gemini response");
       return null;
     }
 
-    return JSON.parse(jsonMatch[0]);
+    return JSON.parse(match[0]);
 
   } catch (err) {
     console.log("❌ Gemini Error:", err.message);
