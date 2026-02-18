@@ -51,6 +51,11 @@ Ticket information:
 
 console.log("🔍 Raw Gemini Response:", response);
 
+if (!process.env.GEMINI_API_KEY) {
+  console.log("❌ GEMINI_API_KEY missing");
+  return null;
+}
+
   
   if (!response?.output?.[0]?.content) {
     console.log("❌ Gemini returned invalid response:", response);
