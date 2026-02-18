@@ -51,8 +51,13 @@ Ticket information:
 
 console.log("🔍 Raw Gemini Response:", response);
 
-  // const raw = response.output[0].content;
-  const raw = response?.output[0]?.content?.[0]?.text || "";
+  
+  if (!response?.output?.[0]?.content) {
+    console.log("❌ Gemini returned invalid response:", response);
+    return null;
+  }
+
+  const raw = response.output[0].content;
 
   console.log("AI RAW RESPONSE:", JSON.stringify(response, null, 2));
 
