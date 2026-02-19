@@ -22,9 +22,20 @@ app.use(express.json());
 //   allowedHeaders: ["Content-Type", "Authorization"],
 // }));
 
+const allowedOrigins = [
+  process.env.FRONTEND_URL,
+  "https://ai-ticket-assistant-black.vercel.app",
+];
+
 app.use(cors({
-  origin: process.env.FRONTEND_URL || "*",
-  credentials: true
+  origin: function (origin, callback) {
+    if (!origin || allowedOrigins.includes(origin) || origin.includes("vercel.app")) {
+      callback(null, true);
+    } else {
+      callback(new Error("Not allowed by CORS"));
+    }
+  },
+  credentials: true,
 }));
 
 
