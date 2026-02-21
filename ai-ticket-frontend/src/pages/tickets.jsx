@@ -139,14 +139,14 @@ export default function Tickets() {
               </p>
 
               <div className="mt-4 flex items-center gap-4 justify-between">
-                <p className="text-xs md:text-sm text-gray-400">
+                <p className="text-xs md:text-sm text-gray-400 align-left">
                   Created At: {new Date(ticket.createdAt).toLocaleString()}
                 </p>
 
-                <p className="text-sm text-gray-400">|</p>
+                <p className="text-sm text-gray-400 align-center">|</p>
 
                 <span
-                  className="
+                  className=" align-right
                     inline-flex items-center gap-2
                     text-xs font-medium
                     px-3 py-1 rounded-full
