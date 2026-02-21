@@ -154,7 +154,7 @@ export default function TicketDetailsPage() {
                   Priority: {ticket.priority ?? "low"}
                 </span>
 
-                <span className="text-sm text-gray-400 ml-1">
+                <span className="text-xs md:text-sm text-gray-400 ml-1">
                   Created: {ticket.createdAt ? new Date(ticket.createdAt).toLocaleString() : "—"}
                 </span>
               </div>
@@ -210,7 +210,7 @@ export default function TicketDetailsPage() {
           </div>
 
           {/* Footer metadata — tidy and visible */}
-          <div className="mt-6 flex items-center justify-between text-sm text-gray-400">
+          <div className="mt-6 flex flex-col md:flex-row items-center justify-between text-sm text-gray-400">
             <div>
               Ticket ID: <span className="text-gray-200">{ticket._id ?? "—"}</span>
             </div>
