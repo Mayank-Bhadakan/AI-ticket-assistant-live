@@ -129,7 +129,7 @@ export default function Tickets() {
 
                <div className="flex items-start  gap-4">
             {/* Title + description */}
-            <div className="min-w-0 w-full">
+            <div className="min-w-0 w-[90%]">
               <h3 className="text-white text-lg md:text-xl font-bold leading-tight transition-colors duration-200 group-hover:text-white">
                 {ticket.title}
               </h3>

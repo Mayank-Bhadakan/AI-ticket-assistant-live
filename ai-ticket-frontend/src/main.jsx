@@ -42,7 +42,8 @@ createRoot(document.getElementById("root")).render(
         <Route
           path="/tickets"
           element={
-            <CheckAuth protectedRoute={true}>
+            //true
+            <CheckAuth protectedRoute={true}> 
               <Tickets />
             </CheckAuth>
           }
