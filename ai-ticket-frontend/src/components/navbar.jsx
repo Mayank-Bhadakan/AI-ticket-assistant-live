@@ -85,7 +85,7 @@ export default function Navbar() {
   };
 
   return (
-    <div className=" w-[100%] flex justify-center " >
+    <div className=" w-[100%] flex justify-center overflow-hidden " >
 
     <div className={`navbar bg-base-200 px-4 w-[80%] fixed top-0 z-50 shadow-md bg-transparant backdrop-blur-md bg-white/10 rounded-b-4xl transition-transform duration-500 ${isHidden ? "-translate-y-full" : "translate-y-0"}`} >
 
@@ -115,7 +115,7 @@ export default function Navbar() {
             </div>
 
             {user && user.role === "admin" && (
-              <Link to="/admin" className="btn btn-sm btn-outline">
+              <Link to="/admin" className="btn btn-sm invisible md:visible btn-outline">
                 Admin
               </Link>
             )}
