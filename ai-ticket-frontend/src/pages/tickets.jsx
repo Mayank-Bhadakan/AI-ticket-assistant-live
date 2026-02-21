@@ -134,11 +134,11 @@ export default function Tickets() {
                 {ticket.title}
               </h3>
 
-              <p className="text-gray-300 mt-2 text-xs md:text-sm line-clamp-3">
+              {/* <p className="text-gray-300 mt-2 text-xs md:text-sm line-clamp-3">
                 {ticket.description}
-              </p>
+              </p> */}
 
-              <div className="mt-4 w-full flex items-center gap-4 justify-between">
+              <div className="mt-4 flex items-center gap-4 justify-between">
                 <p className="text-xs md:text-sm text-gray-400 ">
                   Created At: {new Date(ticket.createdAt).toLocaleString()}
                 </p>
