@@ -198,7 +198,7 @@ export default function TicketDetailsPage() {
           </div>
 
           {/* Helpful notes — improved color + line-height for readability */}
-          <div className="mb-6">
+          <div className="mb-6 overflow-x-auto">
             <h4 className="text-sm font-semibold text-gray-100 mb-2">Helpful Notes</h4>
             <div className="text-gray-300 text-sm leading-7 space-y-2">
               {ticket.helpfulNotes ? (
