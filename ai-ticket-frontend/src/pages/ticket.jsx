@@ -210,7 +210,7 @@ export default function TicketDetailsPage() {
           </div>
 
           {/* Footer metadata — tidy and visible */}
-          <div className="mt-6 flex flex-col md:flex-row items-start md:items-center justify-between text-sm text-gray-400">
+          <div className="mt-6 flex flex-col md:flex-row items-start md:items-center justify-between text-xs md:text-sm text-gray-400">
             <div>
               Ticket ID: <span className="text-gray-200">{ticket._id ?? "—"}</span>
             </div>
