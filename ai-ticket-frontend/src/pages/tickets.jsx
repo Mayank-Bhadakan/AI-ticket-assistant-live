@@ -138,7 +138,7 @@ export default function Tickets() {
                 {ticket.description}
               </p>
 
-              <div className="mt-4 flex items-center gap-4">
+              <div className="mt-4 flex items-center gap-4 justify-between">
                 <p className="text-xs md:text-sm text-gray-400">
                   Created At: {new Date(ticket.createdAt).toLocaleString()}
                 </p>
