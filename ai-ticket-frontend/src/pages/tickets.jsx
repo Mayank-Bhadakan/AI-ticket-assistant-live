@@ -143,7 +143,7 @@ export default function Tickets() {
                   Created At: {new Date(ticket.createdAt).toLocaleString()}
                 </p>
 
-                <p className="text-sm text-gray-400 ">|</p>
+                {/* <p className="text-sm text-gray-400 ">|</p> */}
 
                 <span
                   className="
