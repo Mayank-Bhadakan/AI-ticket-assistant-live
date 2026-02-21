@@ -123,7 +123,7 @@ export default function TicketDetailsPage() {
           }}
         >
           {/* Title + description + meta */}
-          <div className="flex items-start justify-between gap-6">
+          <div className="flex items-start justify-between gap-6 overflow-x-auto">
             <div className="min-w-0">
               <h3 className="text-xl md:text-2xl font-semibold text-gray-100">{ticket.title}</h3>
               <p className="text-gray-300 mt-2 leading-relaxed">{ticket.description}</p>
