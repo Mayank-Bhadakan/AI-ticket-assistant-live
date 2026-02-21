@@ -87,7 +87,7 @@ export default function Navbar() {
   return (
     <div className=" w-[100%] flex justify-center overflow-hidden " >
 
-    <div className={`navbar bg-base-200 px-4 w-[80%] fixed top-0 z-50 shadow-md bg-transparant backdrop-blur-md bg-white/10 rounded-b-4xl transition-transform duration-500 ${isHidden ? "-translate-y-full" : "translate-y-0"}`} >
+    <div className={`navbar bg-base-200 px-4 w-[90%] fixed top-0 z-50 shadow-md bg-transparant backdrop-blur-md bg-white/10 rounded-b-4xl transition-transform duration-500 ${isHidden ? "-translate-y-full" : "translate-y-0"}`} >
 
       <div className="flex-1">
         <Link to="/" className="btn border-none shadow-none text-lg md:text-2xl bg-gradient-to-r from-purple-600 via-pink-400 to-cyan-400 bg-clip-text text-transparent tracking-tight ">
