@@ -130,16 +130,16 @@ export default function Tickets() {
                <div className="flex items-start justify-between gap-4">
             {/* Title + description */}
             <div className="min-w-0">
-              <h3 className="text-white text-xl font-bold leading-tight transition-colors duration-200 group-hover:text-white">
+              <h3 className="text-white text-lg md:text-xl font-bold leading-tight transition-colors duration-200 group-hover:text-white">
                 {ticket.title}
               </h3>
 
-              <p className="text-gray-300 mt-2 text-sm line-clamp-3">
+              <p className="text-gray-300 mt-2 text-xs md:text-sm line-clamp-3">
                 {ticket.description}
               </p>
 
               <div className="mt-4 flex items-center gap-4">
-                <p className="text-sm text-gray-400">
+                <p className="text-xs md:text-sm text-gray-400">
                   Created At: {new Date(ticket.createdAt).toLocaleString()}
                 </p>
 
