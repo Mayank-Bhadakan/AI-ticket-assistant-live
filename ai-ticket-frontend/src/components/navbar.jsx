@@ -90,7 +90,7 @@ export default function Navbar() {
     <div className={`navbar bg-base-200 px-4 w-[80%] fixed top-0 z-50 shadow-md bg-transparant backdrop-blur-md bg-white/10 rounded-b-4xl transition-transform duration-500 ${isHidden ? "-translate-y-full" : "translate-y-0"}`} >
 
       <div className="flex-1">
-        <Link to="/" className="btn border-none shadow-none text-2xl bg-gradient-to-r from-purple-600 via-pink-400 to-cyan-400 bg-clip-text text-transparent tracking-tight ">
+        <Link to="/" className="btn border-none shadow-none text-lg md:text-2xl bg-gradient-to-r from-purple-600 via-pink-400 to-cyan-400 bg-clip-text text-transparent tracking-tight ">
           Ticket AI
         </Link>
       </div>
@@ -109,7 +109,7 @@ export default function Navbar() {
           </>
         ) : (
           <>
-            <div className="text-sm pr-2 text-white/80 font-bold ">
+            <div className=" text-xs md:text-sm pr-2 text-white/80 font-bold ">
               <div>Hi, <span className="font-medium">{user?.email ?? "User"}</span></div>
               <div className="text-xs text-gray-500">{user?.role ?? ""}</div>
             </div>
@@ -122,7 +122,7 @@ export default function Navbar() {
 
             <button
               onClick={logout}
-              className="btn btn-sm btn-error font-bold m-2 opacity-70 hover:opacity-100 transition-all duration-200 "
+              className="btn btn-xs btn-error font-bold m-2 opacity-70 hover:opacity-100 transition-all duration-200 "
               disabled={loading}
             >
               {loading ? "Logging out..." : "Logout"}
