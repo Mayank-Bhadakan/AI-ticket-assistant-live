@@ -127,9 +127,9 @@ export default function Tickets() {
                 to={`/tickets/${ticket._id}`}
                 className="group block p-6 bg-[#0F172A]/60 backdrop-blur-xl rounded-2xl border border-white/5 shadow-lg overflow-hidden transform transition-all duration-300 ease-out hover:-translate-y-1 hover:scale-[1.02] hover:shadow-[0_5px_20px_rgba(108,71,0,0.18)] hover:border-[#6C47FF]/40 focus:outline-none focus:ring-2 focus:ring-[#6C47FF]/30">
 
-               <div className="flex items-start justify-between gap-4">
+               <div className="flex items-start  gap-4">
             {/* Title + description */}
-            <div className="min-w-0">
+            <div className="min-w-0 w-full">
               <h3 className="text-white text-lg md:text-xl font-bold leading-tight transition-colors duration-200 group-hover:text-white">
                 {ticket.title}
               </h3>
@@ -139,14 +139,14 @@ export default function Tickets() {
               </p>
 
               <div className="mt-4 flex items-center gap-4 justify-between">
-                <p className="text-xs md:text-sm text-gray-400 align-left">
+                <p className="text-xs md:text-sm text-gray-400 ">
                   Created At: {new Date(ticket.createdAt).toLocaleString()}
                 </p>
 
-                <p className="text-sm text-gray-400 align-center">|</p>
+                <p className="text-sm text-gray-400 ">|</p>
 
                 <span
-                  className=" align-right
+                  className="
                     inline-flex items-center gap-2
                     text-xs font-medium
                     px-3 py-1 rounded-full
@@ -162,7 +162,7 @@ export default function Tickets() {
             </div>
 
             
-            <div className="shrink-0 ml-2">
+            <div className="shrink-0 ml-2 items-end">
               <svg
                 className="w-6 h-6 text-gray-400 group-hover:text-white transition-colors duration-200"
                 fill="none"
