@@ -115,7 +115,7 @@ export default function Navbar() {
             </div>
 
             {user && user.role === "admin" && (
-              <Link to="/admin" className="btn btn-sm invisible md:visible btn-outline">
+              <Link to="/admin" className="btn btn-sm hidden md:inline btn-outline">
                 Admin
               </Link>
             )}
