@@ -65,11 +65,11 @@ export default function SignupPage() {
   return (
     <PageTransition>
 
-    <div className="min-h-screen flex items-center justify-center bg-black">
+    <div className="min-h-screen  flex items-center justify-center bg-black">
 
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(88,28,135,0.4),transparent),radial-gradient(circle_at_80%_70%,rgba(6,182,212,0.25),transparent)]"></div>
 
-      <div className="card rounded-[1rem] bg-opacity-80 bg-transparent bg-white/20 backgroud-blur-md w-full max-w-sm shadow-2xl bg-base-100 ">
+      <div className="card rounded-[1rem] bg-opacity-80 bg-transparent bg-white/20 backgroud-blur-md w-[85%] md:w-full max-w-sm shadow-2xl bg-base-100 ">
 
        <div class="absolute inset-0 bg-gradient-to-r from-pink-500 via-purple-500 to-blue-500 opacity-20 animate-gradient-slow mix-blend-overlay"></div>
 

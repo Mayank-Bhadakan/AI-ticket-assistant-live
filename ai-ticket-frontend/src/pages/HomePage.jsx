@@ -28,7 +28,7 @@ export default function HomePage() {
             <h1 className="text-3xl md:text-5xl text-cyan-500 font-bold tracking-tight my-2">Intelli Assist</h1>
             <h1 className="text-4xl md:text-6xl font-extrabold text-gray-200 mb-5">AI-Powered Support <br /> Ticketing System</h1>
 
-            <h2 className="font-extralight text-md text-gray-300 opacity-80  mb-10">Intelli Assist transforms traditional support workflows with an AI-driven ticketing system that’s fast, intelligent, and effortlessly scalable. Powered by advanced LLM analysis and automated event-based processing, it categorizes issues, assigns the right moderators, and delivers actionable insights within seconds. With a modern UI, smooth animations, and role-based dashboards, Intelli Assist brings clarity, efficiency, and automation to every step of your support lifecycle.</h2>
+            <h2 className="font-extralight text-left text-md text-gray-300 opacity-80  mb-10">Intelli Assist transforms traditional support workflows with an AI-driven ticketing system that’s fast, intelligent, and effortlessly scalable. Powered by advanced LLM analysis and automated event-based processing, it categorizes issues, assigns the right moderators, and delivers actionable insights within seconds. With a modern UI, smooth animations, and role-based dashboards, Intelli Assist brings clarity, efficiency, and automation to every step of your support lifecycle.</h2>
 
             <Link to="/login" className="flex w-fit items-center gap-3 font-semibold px-6 py-1 mt-7 mb-5 rounded-2xl shadow-lg hover:opacity-70 transition-all duration-300 bg-gradient-to-b from-[rgb(7,95,80)] via-[rgb(10,100,110)] to-[rgb(10,98,205)] inset-shadow-cyan-500/70 shadow-white/50 shadow-sm inset-shadow-sm  " > Let's GO 
 
@@ -63,14 +63,14 @@ export default function HomePage() {
           <h2 className="text-lg tracking-wider font-extralight opacity-70 ">ABOUT</h2>
           <h1 className="text-5xl my-2 tracking-tight font-extrabold bg-gradient-to-b from-[#01dfb3] via-[#0398b9] to-[#045bc3] bg-clip-text text-transparent">Intelli Assist</h1>
 
-          <div className="flex flex-col justify-center mx-[20%] md:mx-[25%] items-center mt-15 gap-5 text-white/80 font-light tracking-tight ">
+          <div className="flex flex-col justify-center mx-[20%] md:mx-[25%] items-center mt-15 gap-10 text-white/80 font-light tracking-tight ">
 
             <div className="flex flex-col md:flex-row w-full gap-4">
               <div className="w-full md:w-1/12 justify-center flex">
                 <img src={rightArrow} alt="" className="w-12 h-10" />
               </div>
               <div className="w-full md:w-11/12 text-left ">
-                <h1 className="mt-1 text-xl text-white/80 tracking-tight">TicketAI is an intelligent, next-generation support management system designed to simplify how teams handle customer issues. Powered by advanced AI analysis, TicketAI automatically reads, understands, and categorizes incoming tickets with exceptional precision. The result is a smarter, faster, and more organized workflow that lets support teams focus on meaningful work while the system handles the repetitive tasks.</h1>
+                <h1 className="mt-1 text-md md:text-xl text-white/80 tracking-normal md:tracking-tight">TicketAI is an intelligent, next-generation support management system designed to simplify how teams handle customer issues. Powered by advanced AI analysis, TicketAI automatically reads, understands, and categorizes incoming tickets with exceptional precision. The result is a smarter, faster, and more organized workflow that lets support teams focus on meaningful work while the system handles the repetitive tasks.</h1>
               </div>
             </div>
 
@@ -79,7 +79,7 @@ export default function HomePage() {
                 <img src={rightArrow} alt="" className="w-12 h-10" />
               </div>
               <div className="w-full md:w-11/12 text-left ">
-                <h1 className="mt-1 text-xl text-white/80 tracking-tight ">Every feature in TicketAI is built to enhance clarity and productivity. Our AI-driven engine intelligently assigns tickets to the right agents, prioritizes urgent issues, and provides real-time insights into team performance. With a modern dashboard, smooth animations, and a beautifully refined UI, TicketAI transforms complicated ticket management into an elegant, intuitive experience. Whether you're a startup or a large organization, the system adapts effortlessly to your support needs.</h1>
+                <h1 className="mt-1 text-md md:text-xl text-white/80 tracking-normal md:tracking-tight ">Every feature in TicketAI is built to enhance clarity and productivity. Our AI-driven engine intelligently assigns tickets to the right agents, prioritizes urgent issues, and provides real-time insights into team performance. With a modern dashboard, smooth animations, and a beautifully refined UI, TicketAI transforms complicated ticket management into an elegant, intuitive experience. Whether you're a startup or a large organization, the system adapts effortlessly to your support needs.</h1>
               </div>
             </div>
 
@@ -88,7 +88,7 @@ export default function HomePage() {
                 <img src={rightArrow} alt="" className="w-12 h-10" />
               </div>
               <div className="w-full md:w-11/12 text-left ">
-                <h1 className="mt-1 text-xl text-white/80 tracking-tight">Built with MERN + Inngest automation, TicketAI brings a smooth animated UI, real-time updates, and consistent email notifications ensuring a professional and efficient support experience.</h1>
+                <h1 className="mt-1 text-md md:text-xl text-white/80 tracking-normal md:tracking-tight">Built with MERN + Inngest automation, TicketAI brings a smooth animated UI, real-time updates, and consistent email notifications ensuring a professional and efficient support experience.</h1>
               </div>
             </div>
 
@@ -98,18 +98,18 @@ export default function HomePage() {
         
       </div>
 
-      <div className="keyfeatures pt-20 asolute">
+      <div className="keyfeatures pt-30  asolute">
 
         <div className="key-Header flex justify-center flex-col text-center ">
 
           <h2 className="text-lg tracking-wider font-extralight opacity-70">KEY FEATURES</h2>
-          <h1 className="text-3xl md:text-6xl my-3 tracking-tight font-extrabold bg-white/70 bg-clip-text text-transparent "> Explore the <span className="bg-gradient-to-b from-[#01dfb3] via-[#0398b9] to-[#045bc3] bg-clip-text text-transparent">Capabilities</span> </h1>
+          <h1 className="text-4xl md:text-6xl my-3 tracking-tight font-extrabold bg-white/70 bg-clip-text text-transparent "> Explore the <span className="bg-gradient-to-b from-[#01dfb3] via-[#0398b9] to-[#045bc3] bg-clip-text text-transparent">Capabilities</span> </h1>
 
         </div>
 
         <div className="flex mt-[5rem] flex-col gap-[5rem]">
 
-        <div className=" relative w-full md:w-[80%] mx-auto flex flex-col md:flex-row items-center gap-10 border-2 border-gray-400/50 rounded-2xl p-5">
+        <div className=" relative w-full md:w-[80%] mx-auto flex flex-col md:flex-row items-center gap-10 border-2 border-gray-400/50 rounded-2xl p-5 shadow-md shadow-gray-400/40">
           <div className="img w-full md:w-1/2 justify-center flex">
             <img src={aichip} alt="" className="object-cover w-[50%]" />
           </div>
@@ -177,7 +177,7 @@ export default function HomePage() {
       
         <div className="text-white relative w-full md:w-[80%] py-10 mx-auto mt-15 flex flex-col px-6">
 
-          <h1 className="text-5xl mx-auto font-bold tracking-tight my-10 mt-15 flex text-center bg-gradient-to-b from-[#01dfb3] via-[#0398b9] to-[#045bc3] bg-clip-text text-transparent border-b-5 rounded-br-2xl rounded-bl-2xl border-white/50 pb-1 px-3">Ticket AI</h1>
+          <h1 className="text-3xl md:text-5xl mx-auto font-bold tracking-tight my-10 mt-15 flex text-center bg-gradient-to-b from-[#01dfb3] via-[#0398b9] to-[#045bc3] bg-clip-text text-transparent border-b-5 rounded-br-2xl rounded-bl-2xl border-white/50 pb-1 px-3">Ticket AI</h1>
 
           <div className="flex flex-col md:flex-row w-full mt-16 justify-between items-center gap-6">
             <h1 className="tracking-wide text-4xl md:text-6xl font-bold bg-gradient-to-b from-white/50 via-white/20  to-transparent bg-clip-text text-transparent">SOCIAL MEDIA</h1>
