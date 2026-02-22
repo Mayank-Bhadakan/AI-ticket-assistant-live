@@ -1,7 +1,8 @@
 import { motion } from "framer-motion";
 import { Ticket, CheckCircle, Clock, BarChart3, Activity, Github } from "lucide-react";
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import { Link } from "react-router-dom";
+import Lottie from "lottie-react";
+import heroAnimation from "../animation/hero.json";
 import PageTransition from "../components/PageTransition.jsx";
 import arrow from "../icon/arrow1.svg"
 import rightArrow from "../icon/rightarrow.png"
@@ -16,6 +17,31 @@ import gitHub from "../icon/github.png"
 import twitter from "../icon/twitter.png"
 
 export default function HomePage() {
+
+  const handleTilt = (e) => {
+  const card = e.currentTarget;
+  const rect = card.getBoundingClientRect();
+
+  const x = e.clientX - rect.left;
+  const y = e.clientY - rect.top;
+
+  const centerX = rect.width / 2;
+  const centerY = rect.height / 2;
+
+  const rotateX = ((y - centerY) / centerY) * 4;
+  const rotateY = ((centerX - x) / centerX) * 4;
+
+  card.style.transform = `
+    rotateX(${rotateX}deg) 
+    rotateY(${rotateY}deg) 
+    scale(0.98)
+  `;
+};
+
+const resetTilt = (e) => {
+  const card = e.currentTarget;
+  card.style.transform = "rotateX(0deg) rotateY(0deg) scale(1)";
+};
 
   return (
 
@@ -42,11 +68,9 @@ export default function HomePage() {
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
           
         <div className="w-full object-fit flex justify-center items-start mt-12 overflow-hidden ">
-          <DotLottieReact
-              src="https://lottie.host/3f8df92e-e859-4b17-aaf9-0ec617f4968e/wy1rNYrDoZ.lottie"
-              loop
-              autoplay className=""
-            />
+
+            <Lottie animationData={heroAnimation} loop className="w-full"/>
+
         </div>
         </div>
       </div>
@@ -110,7 +134,44 @@ export default function HomePage() {
 
         <div className="flex mt-[5rem] flex-col gap-[5rem]">
 
-        <div className=" relative w-full md:w-[80%] mx-auto flex flex-col md:flex-row items-center gap-10 border-2 border-gray-400/50 rounded-2xl p-5 shadow-md shadow-gray-400/40">
+        <div className="relative w-full md:w-[80%] mx-auto perspective-[1200px]">
+
+          <div
+            onMouseMove={handleTilt}
+            onMouseLeave={resetTilt}
+            className="relative flex flex-col md:flex-row items-center gap-10 rounded-2xl p-8 bg-white/[0.01] backdrop-blur-[25px] border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition-transform duration-300 ease-out will-change-transform hover:shadow-[0_2px_10px_rgba(255,255,255,0.1)] ">
+
+            {/* Glass Light Reflection */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-40 pointer-events-none"></div>
+
+            {/* Subtle Edge Line */}
+            <div className="absolute inset-0 rounded-2xl border border-white/5 pointer-events-none"></div>
+
+            {/* Soft Professional Glow */}
+            <div className="absolute inset-0 rounded-2xl opacity-0 hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-cyan-400/10 via-transparent to-purple-400/10 blur-xl"></div>
+
+            {/* Image */}
+            <div className="w-full md:w-1/2 flex justify-center relative z-10 ">
+              <img src={aichip} alt="" className="object-contain w-[60%] transition-transform duration-500" />
+            </div>
+
+            {/* Content */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center relative z-10 ">
+              <h1 className="text-3xl font-semibold text-cyan-600 mb-3 tracking-tight">
+                AI-Powered Ticket Classification
+              </h1>
+
+              <p className="text-lg text-white/80 font-light leading-relaxed">
+                Our system automatically reads and understands each ticket using advanced AI.
+                It analyzes user messages, identifies the issue category, and generates
+                smart insights instantly saving moderators valuable time.
+              </p>
+            </div>
+
+          </div>
+        </div>
+
+        {/* <div className=" relative w-full md:w-[80%] mx-auto flex flex-col md:flex-row items-center gap-10 border-2 border-gray-400/50 rounded-2xl p-5 shadow-md shadow-gray-400/40">
           <div className="img w-full md:w-1/2 justify-center flex">
             <img src={aichip} alt="" className="object-cover w-[50%]" />
           </div>
@@ -118,55 +179,180 @@ export default function HomePage() {
             <h1 className="text-3xl my-2 text-cyan-600 font-bold tracking-tight">AI-Powered Ticket Classification</h1>
             <h2 className=" text-lg font-light text-white/80 tracking-tight ">Our system automatically reads and understands each ticket using advanced AI. It analyzes user messages, identifies the issue category, and generates smart insights instantly saving moderators valuable time.</h2>
           </div>
-        </div>
-        
-        <div className=" relative w-full md:w-[80%] mx-auto flex flex-col md:flex-row items-center gap-10 border-2 border-gray-400/50 rounded-2xl p-5">
-          <div className="feature w-full md:w-1/2 flex flex-col justify-center">
-            <h1 className="text-3xl my-2 text-cyan-600 font-bold tracking-tight">Smart Moderator Assignment</h1>
-            <h2 className=" text-lg font-light text-white/80 tracking-tight ">Ticket AI matches every ticket with the most suitable moderator based on expertise and skill sets. This ensures issues reach the right person immediately, improving accuracy and response efficiency.</h2>
-          </div>
-          <div className="img w-full md:w-1/2 justify-center flex">
-            <img src={userNetwork} alt="" className="object-cover w-[50%]" />
+        </div> */}
+
+        <div className="relative w-full md:w-[80%] mx-auto perspective-[1200px]">
+
+          <div
+            onMouseMove={handleTilt}
+            onMouseLeave={resetTilt}
+            className="relative flex flex-col md:flex-row items-center gap-10 rounded-2xl p-8 bg-white/[0.01] backdrop-blur-[25px] border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition-transform duration-300 ease-out will-change-transform hover:shadow-[0_2px_10px_rgba(255,255,255,0.1)] ">
+
+            {/* Glass Light Reflection */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-40 pointer-events-none"></div>
+
+            {/* Subtle Edge Line */}
+            <div className="absolute inset-0 rounded-2xl border border-white/5 pointer-events-none"></div>
+
+            {/* Soft Professional Glow */}
+            <div className="absolute inset-0 rounded-2xl opacity-0 hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-cyan-400/10 via-transparent to-purple-400/10 blur-xl"></div>
+
+            {/* Content */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center relative z-10">
+              <h1 className="text-3xl font-semibold text-cyan-600 mb-3 tracking-tight">
+                Smart Moderator Assignment
+              </h1>
+
+              <p className="text-lg text-white/80 font-light leading-relaxed">
+               Ticket AI matches every ticket with the most suitable moderator based on expertise and skill sets. This ensures issues reach the right person immediately, improving accuracy and response efficiency.
+              </p>
+            </div>
+
+            {/* Image */}
+            <div className="w-full md:w-1/2 flex justify-center relative z-10">
+              <img src={userNetwork} alt="" className="object-contain w-[60%] transition-transform duration-500" />
+            </div>
+
           </div>
         </div>
 
-        <div className=" relative w-full md:w-[80%] mx-auto flex flex-col md:flex-row items-center gap-10 border-2 border-gray-400/50 rounded-2xl p-5">
-          <div className="img w-full md:w-1/2 justify-center flex">
-            <img src={workflow} alt="" className="object-cover w-[50%]" />
-          </div>
-          <div className="feature w-full md:w-1/2 flex flex-col justify-center">
-            <h1 className="text-3xl my-2 text-cyan-600 font-bold tracking-tight">Real-Time Ticket Workflow Automation</h1>
-            <h2 className=" text-lg font-light text-white/80 tracking-tight ">From ticket creation to admin review, the entire lifecycle is automated. Status changes trigger background events, ensuring smooth transitions from TODO → In Progress → Completed without manual involvement.</h2>
+        <div className="relative w-full md:w-[80%] mx-auto perspective-[1200px]">
+
+          <div
+            onMouseMove={handleTilt}
+            onMouseLeave={resetTilt}
+            className="relative flex flex-col md:flex-row items-center gap-10 rounded-2xl p-8 bg-white/[0.01] backdrop-blur-[25px] border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition-transform duration-300 ease-out will-change-transform hover:shadow-[0_2px_10px_rgba(255,255,255,0.1)] ">
+
+            {/* Glass Light Reflection */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-40 pointer-events-none"></div>
+
+            {/* Subtle Edge Line */}
+            <div className="absolute inset-0 rounded-2xl border border-white/5 pointer-events-none"></div>
+
+            {/* Soft Professional Glow */}
+            <div className="absolute inset-0 rounded-2xl opacity-0 hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-cyan-400/10 via-transparent to-purple-400/10 blur-xl"></div>
+
+            {/* Image */}
+            <div className="w-full md:w-1/2 flex justify-center relative z-10">
+              <img src={workflow} alt="" className="object-contain w-[60%] transition-transform duration-500" />
+            </div>
+
+            {/* Content */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center relative z-10">
+              <h1 className="text-3xl font-semibold text-cyan-600 mb-3 tracking-tight">
+                Real-Time Ticket Workflow Automation
+              </h1>
+
+              <p className="text-lg text-white/80 font-light leading-relaxed">
+               From ticket creation to admin review, the entire lifecycle is automated. Status changes trigger background events, ensuring smooth transitions from TODO → In Progress → Completed without manual involvement.
+              </p>
+            </div>
+
           </div>
         </div>
 
-        <div className=" relative w-full md:w-[80%] mx-auto flex flex-col md:flex-row items-center gap-10 border-2 border-gray-400/50 rounded-2xl p-5">
-          <div className="feature w-full md:w-1/2 flex flex-col justify-center">
-            <h1 className="text-3xl my-2 text-cyan-600 font-bold tracking-tight">Instant Email Notifications</h1>
-            <h2 className=" text-lg font-light text-white/80 tracking-tight ">Important updates never slip through. Ticket AI sends automatic, beautifully formatted emails for assignments, status updates, and admin reviews—keeping everyone connected at all times.</h2>
-          </div>
-          <div className="img w-full md:w-1/2 justify-center flex">
-            <img src={mail}alt="" className="object-cover w-[50%]" />
+        <div className="relative w-full md:w-[80%] mx-auto perspective-[1200px]">
+
+          <div
+            onMouseMove={handleTilt}
+            onMouseLeave={resetTilt}
+            className="relative flex flex-col md:flex-row items-center gap-10 rounded-2xl p-8 bg-white/[0.01] backdrop-blur-[25px] border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition-transform duration-300 ease-out will-change-transform hover:shadow-[0_2px_10px_rgba(255,255,255,0.1)] ">
+
+            {/* Glass Light Reflection */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-40 pointer-events-none"></div>
+
+            {/* Subtle Edge Line */}
+            <div className="absolute inset-0 rounded-2xl border border-white/5 pointer-events-none"></div>
+
+            {/* Soft Professional Glow */}
+            <div className="absolute inset-0 rounded-2xl opacity-0 hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-cyan-400/10 via-transparent to-purple-400/10 blur-xl"></div>
+
+            {/* Content */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center relative z-10">
+              <h1 className="text-3xl font-semibold text-cyan-600 mb-3 tracking-tight">
+                Instant Email Notifications
+              </h1>
+
+              <p className="text-lg text-white/80 font-light leading-relaxed">
+               Important updates never slip through. Ticket AI sends automatic, beautifully formatted emails for assignments, status updates, and admin reviews—keeping everyone connected at all times.
+              </p>
+            </div>
+
+            {/* Image */}
+            <div className="w-full md:w-1/2 flex justify-center relative z-10">
+              <img src={mail} alt="" className="object-contain w-[60%] transition-transform duration-500" />
+            </div>
+
           </div>
         </div>
 
-        <div className=" relative w-full md:w-[80%] mx-auto flex flex-col md:flex-row items-center gap-10 border-2 border-gray-400/50 rounded-2xl p-5">
-          <div className="img w-full md:w-1/2 justify-center flex">
-            <img src={aiFiles} alt="" className="object-cover w-[40%]" />
-          </div>
-          <div className="feature w-full md:w-1/2 flex flex-col justify-center">
-            <h1 className="text-3xl my-2 text-cyan-600 font-bold tracking-tight">AI-Generated Helpful Notes</h1>
-            <h2 className=" text-lg font-light text-white/80 tracking-tight ">Every ticket comes with clear, AI-generated notes that summarize the issue and highlight what matters most. Moderators instantly know what to focus on—no digging required.</h2>
+        <div className="relative w-full md:w-[80%] mx-auto perspective-[1200px]">
+
+          <div
+            onMouseMove={handleTilt}
+            onMouseLeave={resetTilt}
+            className="relative flex flex-col md:flex-row items-center gap-10 rounded-2xl p-8 bg-white/[0.01] backdrop-blur-[25px] border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition-transform duration-300 ease-out will-change-transform hover:shadow-[0_2px_10px_rgba(255,255,255,0.1)] ">
+
+            {/* Glass Light Reflection */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-40 pointer-events-none"></div>
+
+            {/* Subtle Edge Line */}
+            <div className="absolute inset-0 rounded-2xl border border-white/5 pointer-events-none"></div>
+
+            {/* Soft Professional Glow */}
+            <div className="absolute inset-0 rounded-2xl opacity-0 hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-cyan-400/10 via-transparent to-purple-400/10 blur-xl"></div>
+
+            {/* Image */}
+            <div className="w-full md:w-1/2 flex justify-center relative z-10">
+              <img src={aiFiles} alt="" className="object-contain w-[60%] transition-transform duration-500" />
+            </div>
+
+            {/* Content */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center relative z-10">
+              <h1 className="text-3xl font-semibold text-cyan-600 mb-3 tracking-tight">
+               AI-Generated Helpful Notes
+              </h1>
+
+              <p className="text-lg text-white/80 font-light leading-relaxed">
+              Every ticket comes with clear, AI-generated notes that summarize the issue and highlight what matters most. Moderators instantly know what to focus on—no digging required.
+              </p>
+            </div>
+
           </div>
         </div>
 
-        <div className=" relative w-full md:w-[80%] mx-auto flex flex-col md:flex-row items-center gap-10 border-2 border-gray-400/50 rounded-2xl p-5">
-          <div className="feature w-full md:w-1/2 flex flex-col justify-center">
-            <h1 className="text-3xl my-2 text-cyan-600 font-bold tracking-tight">Secure Authentication & Role Control</h1>
-            <h2 className=" text-lg font-light text-white/80 tracking-tight ">With JWT-based authentication and role-based routing, your workspace stays secure. Users, moderators, and admins access only the features designed for them.</h2>
-          </div>
-           <div className="img w-full md:w-1/2 justify-center flex">
-            <img src={securityShild} alt="" className="object-cover w-[50%]" />
+        <div className="relative w-full md:w-[80%] mx-auto perspective-[1200px]">
+
+          <div
+            onMouseMove={handleTilt}
+            onMouseLeave={resetTilt}
+            className="relative flex flex-col md:flex-row items-center gap-10 rounded-2xl p-8 bg-white/[0.01] backdrop-blur-[25px] border border-white/10 shadow-[0_10px_40px_rgba(0,0,0,0.35)] transition-transform duration-300 ease-out will-change-transform hover:shadow-[0_2px_10px_rgba(255,255,255,0.1)] ">
+
+            {/* Glass Light Reflection */}
+            <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-white/20 via-transparent to-transparent opacity-40 pointer-events-none"></div>
+
+            {/* Subtle Edge Line */}
+            <div className="absolute inset-0 rounded-2xl border border-white/5 pointer-events-none"></div>
+
+            {/* Soft Professional Glow */}
+            <div className="absolute inset-0 rounded-2xl opacity-0 hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-cyan-400/10 via-transparent to-purple-400/10 blur-xl"></div>
+
+            {/* Content */}
+            <div className="w-full md:w-1/2 flex flex-col justify-center relative z-10">
+              <h1 className="text-3xl font-semibold text-cyan-600 mb-3 tracking-tight">
+                Secure Authentication & Role Control
+              </h1>
+
+              <p className="text-lg text-white/80 font-light leading-relaxed">
+               With JWT-based authentication and role-based routing, your workspace stays secure. Users, moderators, and admins access only the features designed for them.
+              </p>
+            </div>
+
+            {/* Image */}
+            <div className="w-full md:w-1/2 flex justify-center relative z-10">
+              <img src={securityShild} alt="" className="object-contain w-[60%] transition-transform duration-500" />
+            </div>
+
           </div>
         </div>
 
