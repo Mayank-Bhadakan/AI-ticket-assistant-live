@@ -24,7 +24,7 @@ export default function HomePage() {
     <div className="w-full md:w-[85%] flex flex-col">
 
       <div className="header flex flex-col md:flex-row w-full">
-         <div className="w-full md:w-1/2 my-10 text-center md:text-left">
+         <div className="w-full md:w-1/2 my-10 text-center md:text-left ">
             <h1 className="text-3xl md:text-5xl text-cyan-500 font-bold tracking-tight my-2">Intelli Assist</h1>
             <h1 className="text-4xl md:text-6xl font-extrabold text-gray-200 mb-5">AI-Powered Support <br /> Ticketing System</h1>
 
@@ -37,6 +37,7 @@ export default function HomePage() {
             </Link>
 
         </div>
+        <div className="absolute -top-10 -left-10 w-72 h-72 bg-cyan-500/20 rounded-full blur-3xl -z-10"></div>
 
         <div className="w-full md:w-1/2 flex flex-col items-center md:items-start">
           
@@ -180,7 +181,7 @@ export default function HomePage() {
           <h1 className="text-3xl md:text-5xl mx-auto font-bold tracking-tight my-10 mt-15 flex text-center bg-gradient-to-b from-[#01dfb3] via-[#0398b9] to-[#045bc3] bg-clip-text text-transparent border-b-5 rounded-br-2xl rounded-bl-2xl border-white/50 pb-1 px-3">Ticket AI</h1>
 
           <div className="flex flex-col md:flex-row w-full mt-16 justify-between items-center gap-6">
-            <h1 className="tracking-wide text-4xl md:text-6xl font-bold bg-gradient-to-b from-white/50 via-white/20  to-transparent bg-clip-text text-transparent">SOCIAL MEDIA</h1>
+            <h1 className="tracking-wide text-5xl md:text-6xl font-bold bg-gradient-to-b from-white/50 via-white/20  to-transparent bg-clip-text text-transparent">SOCIAL MEDIA</h1>
             <div className="overflow-hidden flex items-center gap-3 px-10 ">
 
               <img src={linkedIn} alt="" className="w-[2rem] h-[2rem] md:w-[3rem] md:h-[3rem] transition-transform duration-300 ease-out hover:scale-110" />
@@ -192,7 +193,7 @@ export default function HomePage() {
 
           <span className="w-full opacity-30 "><hr  /></span>
 
-          <h1 className="text-md mx-auto font-bold tracking-tight mt-15 flex text-center text-white/30 ">Copyright© 2025 Ticket AI  Pvt. Ltd. All Rights Reserved</h1>
+          <h1 className="text-md mx-auto font-bold tracking-tight mt-5 md:mt-15 flex text-center text-white/30 ">Copyright© 2025 Ticket AI  Pvt. Ltd. All Rights Reserved</h1>
 
         </div>
       
