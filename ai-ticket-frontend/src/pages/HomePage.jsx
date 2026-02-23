@@ -95,7 +95,7 @@ const resetTilt = (e) => {
                 <img src={rightArrow} alt="" className="w-12 h-10" />
               </div>
               <div className="w-full md:w-11/12 text-left ">
-                <h1 className="mt-1 text-md md:text-xl text-white/80 tracking-normal md:tracking-tight">TicketAI is an intelligent, next-generation support management system designed to simplify how teams handle customer issues. Powered by advanced AI analysis, TicketAI automatically reads, understands, and categorizes incoming tickets with exceptional precision. The result is a smarter, faster, and more organized workflow that lets support teams focus on meaningful work while the system handles the repetitive tasks.</h1>
+                <h1 className="mt-1 text-md md:text-xl text-white/70 tracking-normal md:tracking-tight">TicketAI is an intelligent, next-generation support management system designed to simplify how teams handle customer issues. Powered by advanced AI analysis, TicketAI automatically reads, understands, and categorizes incoming tickets with exceptional precision. The result is a smarter, faster, and more organized workflow that lets support teams focus on meaningful work while the system handles the repetitive tasks.</h1>
               </div>
             </div>
 
@@ -104,7 +104,7 @@ const resetTilt = (e) => {
                 <img src={rightArrow} alt="" className="w-12 h-10" />
               </div>
               <div className="w-full md:w-11/12 text-left ">
-                <h1 className="mt-1 text-md md:text-xl text-white/80 tracking-normal md:tracking-tight ">Every feature in TicketAI is built to enhance clarity and productivity. Our AI-driven engine intelligently assigns tickets to the right agents, prioritizes urgent issues, and provides real-time insights into team performance. With a modern dashboard, smooth animations, and a beautifully refined UI, TicketAI transforms complicated ticket management into an elegant, intuitive experience. Whether you're a startup or a large organization, the system adapts effortlessly to your support needs.</h1>
+                <h1 className="mt-1 text-md md:text-xl text-white/70 tracking-normal md:tracking-tight ">Every feature in TicketAI is built to enhance clarity and productivity. Our AI-driven engine intelligently assigns tickets to the right agents, prioritizes urgent issues, and provides real-time insights into team performance. With a modern dashboard, smooth animations, and a beautifully refined UI, TicketAI transforms complicated ticket management into an elegant, intuitive experience. Whether you're a startup or a large organization, the system adapts effortlessly to your support needs.</h1>
               </div>
             </div>
 
@@ -113,7 +113,7 @@ const resetTilt = (e) => {
                 <img src={rightArrow} alt="" className="w-12 h-10" />
               </div>
               <div className="w-full md:w-11/12 text-left ">
-                <h1 className="mt-1 text-md md:text-xl text-white/80 tracking-normal md:tracking-tight">Built with MERN + Inngest automation, TicketAI brings a smooth animated UI, real-time updates, and consistent email notifications ensuring a professional and efficient support experience.</h1>
+                <h1 className="mt-1 text-md md:text-xl text-white/70 tracking-normal md:tracking-tight">Built with MERN + Inngest automation, TicketAI brings a smooth animated UI, real-time updates, and consistent email notifications ensuring a professional and efficient support experience.</h1>
               </div>
             </div>
 
