@@ -368,11 +368,19 @@ const resetTilt = (e) => {
 
           <div className="flex flex-col md:flex-row w-full mt-16 justify-between items-center gap-6">
             <h1 className="tracking-wide text-5xl md:text-6xl font-bold bg-gradient-to-b from-white/50 via-white/20  to-transparent bg-clip-text text-transparent">SOCIAL MEDIA</h1>
-            <div className="overflow-hidden flex items-center gap-3 px-10 ">
+            <div className="overflow-hidden flex items-center gap-3 px-10 py-5">
 
+              <a href="https://www.linkedin.com/in/mayank-bhadakan/" target="_blank" rel="noopener noreferrer"> 
               <img src={linkedIn} alt="" className="w-[2rem] h-[2rem] md:w-[3rem] md:h-[3rem] transition-transform duration-300 ease-out hover:scale-110" />
+              </a>
+
+              <a href="https://github.com/Mayank-Bhadakan" target="_blank" rel="noopener noreferrer">
               <img src={gitHub} alt="" className="w-[2rem] h-[2rem] md:w-[3rem] md:h-[3rem] transition-transform duration-300 ease-out hover:scale-110" />
+              </a>
+
+              {/* <a href="https://www.linkedin.com/in/YOUR_ID" target="_blank" rel="noopener noreferrer"> */}
               <img src={twitter} alt="" className="w-[2rem] h-[2rem] md:w-[3rem] md:h-[3rem] transition-transform duration-300 ease-out hover:scale-110" />
+              {/* </a> */}
               
             </div>
           </div>
