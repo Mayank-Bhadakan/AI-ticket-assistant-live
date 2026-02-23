@@ -198,7 +198,7 @@ const resetTilt = (e) => {
             <div className="absolute inset-0 rounded-2xl opacity-0 hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-cyan-400/10 via-transparent to-purple-400/10 blur-xl"></div>
 
             {/* Content */}
-            <div className="w-full md:w-1/2 flex flex-col justify-center relative z-10">
+            <div className="w-full md:w-1/2 flex flex-col justify-center relative z-10 order-2 md:order-1">
               <h1 className="text-3xl font-semibold text-cyan-600 mb-3 tracking-tight">
                 Smart Moderator Assignment
               </h1>
@@ -209,7 +209,7 @@ const resetTilt = (e) => {
             </div>
 
             {/* Image */}
-            <div className="w-full md:w-1/2 flex justify-center relative z-10">
+            <div className="w-full md:w-1/2 flex justify-center relative z-10 order-1 md:order-2">
               <img src={userNetwork} alt="" className="object-contain w-[60%] transition-transform duration-500" />
             </div>
 
@@ -268,7 +268,7 @@ const resetTilt = (e) => {
             <div className="absolute inset-0 rounded-2xl opacity-0 hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-cyan-400/10 via-transparent to-purple-400/10 blur-xl"></div>
 
             {/* Content */}
-            <div className="w-full md:w-1/2 flex flex-col justify-center relative z-10">
+            <div className="w-full md:w-1/2 flex flex-col justify-center relative z-10 order-2 md:order-1">
               <h1 className="text-3xl font-semibold text-cyan-600 mb-3 tracking-tight">
                 Instant Email Notifications
               </h1>
@@ -279,7 +279,7 @@ const resetTilt = (e) => {
             </div>
 
             {/* Image */}
-            <div className="w-full md:w-1/2 flex justify-center relative z-10">
+            <div className="w-full md:w-1/2 flex justify-center relative z-10 order-1 md:order-2">
               <img src={mail} alt="" className="object-contain w-[60%] transition-transform duration-500" />
             </div>
 
@@ -338,7 +338,7 @@ const resetTilt = (e) => {
             <div className="absolute inset-0 rounded-2xl opacity-0 hover:opacity-100 transition duration-500 pointer-events-none bg-gradient-to-r from-cyan-400/10 via-transparent to-purple-400/10 blur-xl"></div>
 
             {/* Content */}
-            <div className="w-full md:w-1/2 flex flex-col justify-center relative z-10">
+            <div className="w-full md:w-1/2 flex flex-col justify-center relative z-10 order-2 md:order-1">
               <h1 className="text-3xl font-semibold text-cyan-600 mb-3 tracking-tight">
                 Secure Authentication & Role Control
               </h1>
@@ -349,7 +349,7 @@ const resetTilt = (e) => {
             </div>
 
             {/* Image */}
-            <div className="w-full md:w-1/2 flex justify-center relative z-10">
+            <div className="w-full md:w-1/2 flex justify-center relative z-10 order-1 md:order-2">
               <img src={securityShild} alt="" className="object-contain w-[60%] transition-transform duration-500" />
             </div>
 
